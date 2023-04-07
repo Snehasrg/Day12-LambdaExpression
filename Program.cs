@@ -16,7 +16,7 @@
 
             };
             DisplayStudentDetails(list);
-           
+            StudentDataManagement.DisplayFrequencyofEachAddress(list);
             Console.ReadLine();
         }
         public static void DisplayStudentDetails(List<Student> list)
