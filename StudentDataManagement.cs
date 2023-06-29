@@ -29,6 +29,8 @@ namespace LambdaExpression
                 Console.WriteLine("Phone Number: " + studentdisplay.PhoneNumber);
                 Console.WriteLine("Address: " + studentdisplay.Address);
                 Console.WriteLine("Age: " + studentdisplay.Age);
+                Console.WriteLine("Mark: " + studentdisplay.Mark);
+
                 Console.WriteLine();
 
             }
