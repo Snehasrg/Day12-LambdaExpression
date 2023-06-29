@@ -8,21 +8,29 @@ namespace LambdaExpression
 {
     public class StudentDataManagement
     {
-        public static void DisplayFrequencyofEachAddress(List<Student> list)
+        public static List<Student> AddStudent()
         {
-            Console.WriteLine("\nDisplaying Details Based on Address");
-            var res = list.GroupBy(a => a.Address);
-            foreach(var r in res)
-            { 
-                Console.WriteLine("Key:", r.Key);
-                Console.WriteLine("-------------------");
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Id = 1, Name = "Mahesh", PhoneNumber = 9874561232, Address = "Mumbai", Age = 12 });
+            students.Add(new Student { Id = 2, Name = "Akshay", PhoneNumber = 9874786413, Address = "Mumbai", Age = 25 });
+            students.Add(new Student { Id = 3, Name = "Rajesh", PhoneNumber = 7898456512, Address = "Nashik", Age = 15 });
+            students.Add(new Student { Id = 4, Name = "Gaurav", PhoneNumber = 8882224567, Address = "Nagpur", Age = 30 });
+            students.Add(new Student { Id = 5, Name = "Pavan", PhoneNumber = 7785412547, Address = "Nashik", Age = 18 });
+            students.Add(new Student { Id = 6, Name = "Ram", PhoneNumber = 8882224567, Address = "Nagpur", Age = 30 });
+            return students;
+        }
 
-                List<Student> students =r.ToList();
-                foreach(Student s in students) 
-                {
-                    Console.WriteLine(s);
-                }
+        public static void DisplayStudent(List<Student> student)
+        {
+            foreach (Student studentdisplay in student)
+            {
+                Console.WriteLine("ID: " + studentdisplay.Id);
+                Console.WriteLine("Name: " + studentdisplay.Name);
+                Console.WriteLine("Phone Number: " + studentdisplay.PhoneNumber);
+                Console.WriteLine("Address: " + studentdisplay.Address);
+                Console.WriteLine("Age: " + studentdisplay.Age);
                 Console.WriteLine();
+
             }
         }
 
